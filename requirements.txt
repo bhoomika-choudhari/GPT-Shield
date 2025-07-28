@@ -2,7 +2,7 @@ streamlit
 bcrypt
 transformers
 torch
-nltk
+nltk==3.7
 plotly
 google-generativeai
 gtts
