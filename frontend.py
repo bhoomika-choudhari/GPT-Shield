@@ -26,8 +26,20 @@ auth_flow()
 if not st.session_state.authenticated:
     st.stop()
 
-nltk.download('punkt')
-nltk.download('stopwords')
+@st.cache_resource
+def download_nltk_resources():
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt")
+
+    try:
+        nltk.data.find("corpora/stopwords")
+    except LookupError:
+        nltk.download("stopwords")
+
+download_nltk_resources()
+
 
 @st.cache_resource
 def load_model():
