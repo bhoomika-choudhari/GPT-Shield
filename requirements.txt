@@ -1,0 +1,14 @@
+streamlit
+bcrypt
+transformers
+torch
+nltk
+plotly
+google-generativeai
+gtts
+PyMuPDF
+python-docx
+language-tool-python
+textstat
+pydub
+speechrecognition
